@@ -20,11 +20,11 @@ app.get('/users', (req, res) => {
         name: "Andrew",
         age: 30
     }, {
-        naem: 'Jen',
-        age = 40
+        name: 'Jen',
+        age: 40
     }]);
 });
 
-app.listen(3000);
+app.listen(3000); 
 
 module.exports.app = app; //export app to use in other files

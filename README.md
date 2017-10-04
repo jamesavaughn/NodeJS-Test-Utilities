@@ -57,3 +57,30 @@ Add `"test-watch": "nodemon --exec 'npm test'"` to the package.json file
    `     done(); //call done method`
 
 10) `supertest` package for testing testing express apps
+ 
+
+
+** Describe Blocks **
+
+* Use describe blocks to make tests easier to scan
+`describe('Utils', () =>{`
+`});`
+
+** describe('TEST DESCRIPTION', () => {
+    it(); function test code..
+}); **
+
+
+** Use Spies to test functions **
+const expect = require('expect');
+
+describe('App', () => {
+    it('should call the spy correctly', () => {
+        var spy = expect.createSpy();
+        spy('Andrew', 25);
+        //expect(spy).toHaveBeenCalled();
+        expect(spy).toHaveBeenCalledWith('Andrew', 25);
+        
+
+    });
+});
