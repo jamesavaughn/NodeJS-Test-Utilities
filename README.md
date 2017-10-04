@@ -32,22 +32,28 @@ Sample node test cases using assertion modules.
     `}`
 `});`
 
-7) set up auto testing `nodemon --exec 'npm test' 
-`        "test-watch": "nodemon --exec 'npm test'"`
-8)`$ npm run test-watch`
-9) `$ npm install expect@1.20.2 --save-dev`
+7) set up auto testing 
+`nodemon --exec 'npm test' 
+Add `"test-watch": "nodemon --exec 'npm test'"` to the package.json file
+`$ npm run test-watch`
 
-` it('should add two numbers', () => {`
-    `var res = utils.add(10, 30);`
-    `expect(res).toBe(40); `
+8) Install Expect to dev environment
+`$ npm install expect@1.20.2 --save-dev`
 
+it(); syntax>>
+` it('should ...', () => {`
+    `var res = ...;`
+    `expect(res).toBe(...); `
 
+9) Add done() argument for async testing
 ** Async Test Needs 'Done' argument **
 
-`it('should async add two numbers', (done) => { //done argument tells Mocha it's a async test`
+Syntax>> `it('should async add two numbers', (done) => { //done argument tells Mocha it's a async test`
  `   utils.asyncAdd(4, 3, (sum) => {`
   `      expect(sum).toBe(7).toBeA('number');`
    `     done(); //call done method`
    ` });`
 `});`
 //# NodeJS-Test-Utilities
+
+10) `supertest` package for testing testing express apps
